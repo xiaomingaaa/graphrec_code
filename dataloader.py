@@ -31,6 +31,8 @@ def get_dataloader(datapath,batch_size,shuffle=True):
                         shuffle=shuffle)
     return dataloader
 
+if __name__=='__main__':
+    pass
 
 #dataset1=DiabetesDataset('train_data_csv')
 #train_loader=DataLoader(dataset=dataset1,

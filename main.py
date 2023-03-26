@@ -4,7 +4,7 @@
 #### 4. 评估模型
 #### 5. 节点的embedding保存起来
 from config import *  ### 定义的参数
-from model import GCN,GAT  #### 模型
+from model import GAT  #### 模型
 #from preprocess_0313 import process_knowledge_graph,process_dataset
 from dataloader import DiabetesDataset,get_dataloader
 from util import construst_kg, eval

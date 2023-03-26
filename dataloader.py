@@ -6,7 +6,7 @@ from torch.utils.data import Dataset
 from torch.utils.data import DataLoader
 class DiabetesDataset(Dataset):
     def __init__(self,datapath):
-        self.data=pd.read_csv(datapath, columns=['user_id', 'item_id', 'lable'])
+        self.data=pd.read_csv(datapath, usecols=['user_id', 'item_id', 'label'])
         #self.len=df.columns[0] ### 行数
         self.user_ids = torch.LongTensor(self.data['user_id'].values)
         self.item_ids = torch.LongTensor(self.data['item_id'].values)
@@ -31,8 +31,15 @@ def get_dataloader(datapath,batch_size,shuffle=True):
                         shuffle=shuffle)
     return dataloader
 
-if __name__=='__main__':
-    pass
+# if __name__=='__main__':
+#     datapath='dataset/KG/train_data.csv'
+#     batch_size=32
+#     shuffle=True
+
+#     dataloader=get_dataloader(datapath,batch_size,shuffle)
+
+#     for batch in dataloader:
+#         print(f"Batch size: {len(batch['user_id'])}")
 
 #dataset1=DiabetesDataset('train_data_csv')
 #train_loader=DataLoader(dataset=dataset1,

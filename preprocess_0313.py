@@ -172,8 +172,8 @@ def process_dataset(data_path='dataset/UserBehavior.csv'):
     #train_data, test_data = train_test_split(list(all_data_set), train_size=0.8, test_size=0.2)
     # train_data.to_csv('dataset/data/train_data.csv')
     # test_data.to_csv('dataset/data/test_data.csv')
-    pd.DataFrame(train_data,columns=['user_id', 'item_id', 'lable']).to_csv('dataset/KG/train_data.csv',index=False)
-    pd.DataFrame(test_data,columns=['user_id', 'item_id', 'lable']).to_csv('dataset/KG/test_data.csv',index=False)
+    pd.DataFrame(train_data,columns=['user_id', 'item_id', 'label']).to_csv('dataset/KG/train_data.csv',index=False)
+    pd.DataFrame(test_data,columns=['user_id', 'item_id', 'label']).to_csv('dataset/KG/test_data.csv',index=False)
 
 if __name__ == '__main__':
     # 处理知识图谱
